@@ -1,0 +1,27 @@
+<h1>Eat-Da-Burger!</h1>
+
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{burger_name}}{{burgers devoured=false}}<button class="not-devoured" id="devour" data-id="{{id}}" data-devoured="{{devoured}}">
+      Devour It!
+    </button>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{burger_name}}{{burgers devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<textarea name="new-burger" id="burger-text" cols="30" rows="10"></textarea>
+<button class="submit" data-id="{{id}}" data-name="{{name}}">
+    Submit!
+</button>
+<p>Enter a burger you want to eat then click the "Submit" button!</p>
