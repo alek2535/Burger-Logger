@@ -42,7 +42,7 @@ Application should allow users to change burgers to eaten status.
 
 ## Deployed Application
 
-Here is the URL for the deployed [Eat-Da-Burger! Application](https://damp-sands-84380.herokuapp.com/) on Heroku.
+Here is the URL for the deployed [Eat-Da-Burger! Application](https://polar-shelf-16735.herokuapp.com/) on Heroku.
 
 
 ## Installation
