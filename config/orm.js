@@ -48,11 +48,11 @@ const orm = {
       });
     },
     // An example of objColVals would be {burger_name: California Chicken Burger, devoured: true}
-    updateOne: (table, objColVal, condition, cb) => {
+    updateOne: (table, objColVals, condition, cb) => {
       let queryString = "UPDATE " + table;
   
       queryString += " SET ";
-      queryString += objToSql(objColVal);
+      queryString += objToSql(objColVals);
       queryString += " WHERE ";
       queryString += condition;
   
