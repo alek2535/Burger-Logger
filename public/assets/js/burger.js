@@ -21,7 +21,7 @@ $(function() {
         );
       });
 
-    $('#devour').on("click", function(event) {
+    $('.not-devoured').on("click", function(event) {
       let id = $(this).data("id");
       let newDevour = $(this).data("devoured");
   

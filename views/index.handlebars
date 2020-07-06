@@ -1,27 +1,53 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="container">
+    <img class="img-fluid mx-auto d-block" src="https://images.vexels.com/media/users/3/152676/isolated/preview/4901900ec6cd623e843598a78d23eefa-triple-cheeseburger-icon-by-vexels.png" alt="">
 
+    <h1 class="text-center m-3">Eat-Da-Burger!</h1>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{burger_name}}{{burgers devoured=false}}<button class="not-devoured" id="devour" data-id="{{id}}" data-devoured="{{devoured}}">
-      Devour It!
-    </button>
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div class="row">
+        <div class="col-6">
+            <ul class="list-group">
+                    {{#each burgers}}
+                        {{#unless devoured}}
+                        <li class="list-group-item">
+                        {{burger_name}}{{burgers devoured=false}}<button class="not-devoured ml-2" id="devour" data-id="{{id}}" data-devoured="{{devoured}}">
+                        Devour It!
+                        </button>
+                        </li>
+                        {{/unless}}
+                    {{/each}}
+            </ul>
+        </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{burger_name}}{{burgers devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+        <div class="col-6">
+            <ul class="list-group">
+                    {{#each burgers}}
+                        {{#if devoured}}
+                        <li class="list-group-item">
+                        {{burger_name}}{{burgers devoured=true}}
+                        </li>
+                        {{/if}}
+                    {{/each}}
+            </ul>
+        </div>
+    </div>
 
-
-<textarea name="new-burger" id="burger-text" cols="30" rows="10"></textarea>
-<button class="submit" data-id="{{id}}" data-name="{{name}}">
-    Submit!
-</button>
-<p>Enter a burger you want to eat then click the "Submit" button!</p>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col text-center">
+                <textarea class="text-center form-control" name="new-burger" id="burger-text" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button class="submit rounded btn-primary my-3" data-id="{{id}}" data-name="{{name}}">
+                    Submit!
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <p>Enter a burger you want to eat then click the "Submit" button!</p>
+            </div>
+        </div>
+    </div>
+</div>
